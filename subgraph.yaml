@@ -1,16 +1,16 @@
 specVersion: 0.0.2
-description: Iron Bank is a decentralized protocol to protocol lending platform.
-repository: https://github.com/ibdotxyz/ib-subgraph
+description: Galaxy Finance Subgraph for supply/lending
+repository: https://github.com/TheMyth42/galaxy-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: Comptroller
-    network: mainnet
+    network: bsc
     source:
-      address: "0xAB1c342C7bf5Ec5F02ADEA1c2270670bCa144CbB"
+      address: "0x29152a70BABc383e41fa20c52DB0643F4CD007e9"
       abi: Comptroller
-      startBlock: 11384868
+      startBlock: 26334537
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -69,7 +69,7 @@ dataSources:
 templates:
   - name: CToken
     kind: ethereum/contract
-    network: mainnet
+    network: bsc
     source:
       abi: CCollateralCapErc20
     mapping:
