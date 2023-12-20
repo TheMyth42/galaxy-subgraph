@@ -1,4 +1,4 @@
-specVersion: 0.0.2
+specVersion: 0.0.4
 description: Galaxy Finance Subgraph for supply/lending
 repository: https://github.com/TheMyth42/galaxy-subgraph
 schema:
@@ -13,7 +13,7 @@ dataSources:
       startBlock: 26334537
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.5
+      apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
         - Comptroller
@@ -74,7 +74,7 @@ templates:
       abi: CCollateralCapErc20
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.5
+      apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
         - Account
