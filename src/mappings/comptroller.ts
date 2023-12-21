@@ -37,6 +37,7 @@ function createComptroller(address: Address): Comptroller {
   comptroller.admin = contract.admin()
   comptroller.implementation = contract.comptrollerImplementation()
   comptroller.priceOracle = contract.oracle()
+  comptroller.closeFactor = contract.closeFactorMantissa()
   comptroller.totalMarkets = 0
   return comptroller
 }
