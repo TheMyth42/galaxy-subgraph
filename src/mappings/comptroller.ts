@@ -32,13 +32,12 @@ import { createMarket } from './market'
 
 function createComptroller(address: Address): Comptroller {
   let contract = ComptrollerContract.bind(address)
-
   let comptroller = new Comptroller('1')
   comptroller.address = address
   comptroller.admin = contract.admin()
   comptroller.implementation = contract.comptrollerImplementation()
+  comptroller.priceOracle = contract.oracle()
   comptroller.totalMarkets = 0
-
   return comptroller
 }
 
